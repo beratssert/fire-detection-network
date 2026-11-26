@@ -156,10 +156,15 @@ request.
 | `firmware.yml` | added with the first firmware code | host unit tests, cross-compiled build, static analysis, firmware binaries built with the all-zero key template (artifact) |
 | `release.yml` | milestone tags | GitHub release with generated notes; firmware binaries are attached once the firmware workflow exists |
 
-**Quality gate.** SonarQube Cloud analyses every pull request and reports a "Quality Gate" status. A GitHub ruleset
-on `main` and `milestone/*` requires a pull request with one approval, the checks `ci`, `commits`, the three
-`setup` checks (later also `firmware`) and the quality gate, and forbids force pushes. Code that does not pass cannot be merged. Pushes to task
-branches are not blocked by quality on GitHub.com; the gate applies when the branch is merged.
+**Quality gate.** SonarQube Cloud analyses every pull request and reports a "Quality Gate" status (check
+`SonarCloud Code Analysis`). A GitHub ruleset on `main` and `milestone/*` requires a pull request with one approval,
+the checks `ci`, `commits`, the three `setup` checks (later also `firmware`) and the quality gate, and forbids force
+pushes and branch deletion. Code that does not pass cannot be merged. Pushes to task branches are not blocked by
+quality on GitHub.com; the gate applies when the branch is merged.
+
+**Action versions.** GitHub's own actions (`actions/*`) are used by major version; third-party actions are pinned to a
+commit SHA with the version in a comment. There is no automatic update: when GitHub warns about an action (for example a
+deprecated runtime) or a new version is needed, a `[CI]` pull request updates it.
 
 **Deployment.** The firmware is flashed onto the boards by hand with the ST-LINK/V2; the steps are in
 [`firmware/`](../firmware/). A release collects the binaries of a milestone.

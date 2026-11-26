@@ -1,0 +1,1215 @@
+% =====================================================================
+% References for the forest-fire sensor-network project (Akdeniz CSE)
+% Compiled 2026-09-29.
+%
+% Verification status (see the "note" comment above each entry):
+%   [V] bibliographic data AND content checked against publisher/DOI page
+%   [B] bibliographic data checked, content not read
+%   [U] from memory / secondary source -- VERIFY before citing in a paper
+% Vendor pages are misc entries and are VENDOR CLAIMS, not independent evidence.
+% =====================================================================
+
+% ------------------------------------------------------------ %
+% A. Deployed / commercial systems and competing approaches
+% ------------------------------------------------------------ %
+% [READ_FULL (WF) 2026-10-06, vendor] product page: spacing up to 300 m, 8x8 cm solar panel, supercapacitors, 10-15 yr claim; mounting height not stated
+@misc{dryad_silvanet,
+  author       = {{Dryad Networks GmbH}},
+  title        = {Silvanet Wildfire Sensor (Model WF-4P PRO), Mesh Gateway and Border Gateway: Technical Datasheets},
+  year         = {2026},
+  howpublished = {\url{https://www.dryad.net/wildfiresensor}},
+  note         = {Accessed 2026-10-06. Vendor claims: solar panel and supercapacitors, gas and PM sensors, tree or pole mounting, spacing up to 300 m.}
+}
+% [V vendor claim]
+@misc{dryad_xprize,
+  author       = {{Dryad Networks GmbH}},
+  title        = {Dryad Wins International {XPRIZE} Wildfire Award for Autonomous Wildfire Detection and Suppression},
+  year         = {2026},
+  howpublished = {\url{https://www.dryad.net/post/dryad-wins-international-xprize-wildfire-award-for-autonomous-wildfire-detection-and-suppression}},
+  note         = {Accessed 2026-09-29. Vendor press release.}
+}
+% [READ_FULL (WF) 2026-10-06, vendor] Lebanon deployment, 91 sensors / 78 ha, 2 gateways; page read via WebFetch, publication date not shown
+@misc{dryad_mada,
+  author       = {{Dryad Networks GmbH}},
+  title        = {Case Study: Mada, Lebanon},
+  year         = {n.d.},
+  howpublished = {\url{https://www.dryad.net/case-studies/mada}},
+  note         = {Accessed 2026-10-06. Vendor claims: 91 sensors over 78 ha, two gateways.}
+}
+% [V vendor claim] Multi-gas micro-sensor chip and edge AI mesh
+@misc{n5sensors_chemshield,
+  author       = {{N5 Sensors Inc.}},
+  title        = {{ChemShield} and {SPH} Sensing Core: Rapidly Deployable Solar-Powered Mesh Network for Wildfire and Chemical Intelligence},
+  year         = {2026},
+  howpublished = {\url{https://www.n5sensors.com/}},
+  note         = {Accessed 2026-10-03. Multi-gas (CO, NO2, VOC, PM2.5) fingerprinting and hyper-local wind sensing.}
+}
+% [V vendor claim] Turkish climate-tech startup deploying IoT sensors in Mediterranean forests
+@misc{forestguard_nowildfire,
+  author       = {{ForestGuard}},
+  title        = {{ForestGuard}: Precision {IoT} Environmental Sensors and {AI} Detection Engine for Early Wildfire Detection},
+  year         = {2026},
+  howpublished = {\url{https://www.nowildfire.com/}},
+  note         = {Accessed 2026-10-03. Turkey deployments in Marmaris, Çanakkale and Antalya.}
+}
+% [V vendor claim] Pre-ignition grid-edge fault and arc detection
+@misc{gridware_gridscope,
+  author       = {{Gridware Inc.}},
+  title        = {{Gridscope}: Grid-Edge Intelligence and Utility Infrastructure Monitoring for Wildfire Prevention},
+  year         = {2026},
+  howpublished = {\url{https://www.gridware.io/}},
+  note         = {Accessed 2026-10-03. Pole-mounted vibration, sound, and electric field sensors.}
+}
+% [V vendor claim] 360-degree panoramic dual 6 MP cameras
+@misc{pano_ai,
+  author       = {{Pano AI}},
+  title        = {Pano Rapid Wildfire Detection: 360-Degree Panoramic Ultra-{HD} Stations and {AI} Smoke Detection},
+  year         = {2026},
+  howpublished = {\url{https://www.pano.ai/}},
+  note         = {Accessed 2026-10-03. 20-35 km detection range, 1-min 360-deg scan, 30x optical zoom.}
+}
+% [V vendor claim] Autonomous drone AI for thermal frontline mapping
+@misc{robotto_ai,
+  author       = {{Robotto}},
+  title        = {{Robotto AWRA}: Autonomous Drone Perception {AI} for Real-Time Wildfire Border and Thermal Hotspot Tracking},
+  year         = {2026},
+  howpublished = {\url{https://robotto.ai/}},
+  note         = {Accessed 2026-10-03. Platform-agnostic thermal and RGB edge AI.}
+}
+% [V vendor claim] Autonomous aerial rapid initial attack
+@misc{rain_aero,
+  author       = {{Rain Aero}},
+  title        = {Autonomous Wildfire Mission Systems for Uncrewed Aerial Initial Attack},
+  year         = {2026},
+  howpublished = {\url{https://www.rain.aero/}},
+  note         = {Accessed 2026-10-03. 37 km response radius, 115 L autonomous suppression payload.}
+}
+% [V vendor claim] LEO nanosatellite thermal constellation
+@misc{ororatech,
+  author       = {{OroraTech GmbH}},
+  title        = {Thermal-Infrared Nanosatellite Constellation for Global Wildfire Intelligence},
+  year         = {2026},
+  howpublished = {\url{https://ororatech.com/}},
+  note         = {Accessed 2026-10-03. Target 20-30 min revisit, thermal-IR early detection.}
+}
+% [V vendor claim] air-quality network, 2-5 km spacing, 5-15 min
+@misc{breeze_wildfire,
+  author       = {{Breeze Technologies}},
+  title        = {Wildfire Detection},
+  year         = {2026},
+  howpublished = {\url{https://www.breeze-technologies.de/solutions/wildfire-detection/}},
+  note         = {Accessed 2026-09-29. Vendor claims.}
+}
+@misc{alertcalifornia,
+  author       = {{UC San Diego}},
+  title        = {{ALERTCalifornia}},
+  year         = {2026},
+  howpublished = {\url{https://alertcalifornia.org/}},
+  note         = {Accessed 2026-09-29.}
+}
+% [V government] A$1.4M over 5 years for 22 sites covering 1.2 Mha
+@misc{nsw_pano,
+  author       = {{NSW Government}},
+  title        = {Roll-out of {Australia's} largest early fire detection camera network in {NSW's} soft wood state forests},
+  year         = {2025},
+  howpublished = {\url{https://www.nsw.gov.au/ministerial-releases/roll-out-of-australias-largest-early-fire-detection-camera-network-nsws-soft-wood-state-forests}},
+  note         = {Ministerial release, 18 Sep 2025.}
+}
+@misc{iqfirewatch,
+  author       = {{IQ Technologies for Earth and Space GmbH}},
+  title        = {{IQ FireWatch} Technology},
+  year         = {2026},
+  howpublished = {\url{https://www.iq-firewatch.com/technology}},
+  note         = {Accessed 2026-09-29. Vendor claims.}
+}
+@misc{insightrobotics,
+  author       = {{Insight Robotics}},
+  title        = {Wildfire Detection System},
+  year         = {2026},
+  howpublished = {\url{https://www.insightrobotics.com/en/services/wildfire-detection-system/}},
+  note         = {Accessed 2026-09-29. Vendor claims.}
+}
+@misc{smoked,
+  author       = {{SmokeD}},
+  title        = {{SmokeD} System},
+  year         = {2026},
+  howpublished = {\url{https://smokedsystem.com/}},
+  note         = {Accessed 2026-09-29. Vendor claims.}
+}
+% [V] MODIS: ~1000 m^2 routinely, ~50 m^2 pristine
+% internal: sec. 8.3.2 read 2026-10-06; key name kept from the earlier Rev C entry
+@manual{giglio2020modis,
+  author       = {Giglio, Louis and Schroeder, Wilfrid and Hall, Joanne V. and Justice, Christopher O.},
+  title        = {{MODIS} Collection 6 and Collection 6.1 Active Fire Product User's Guide, Version 1.0},
+  organization = {University of Maryland / NASA},
+  month        = may,
+  year         = {2021},
+  note         = {Adapted from the C6 Revision C guide}
+}
+}
+@article{schroeder2014viirs,
+  author  = {Schroeder, Wilfrid and Oliva, Patricia and Giglio, Louis and Csiszar, Ivan A.},
+  title   = {The New {VIIRS} 375 m Active Fire Detection Data Product: Algorithm Description and Initial Assessment},
+  journal = {Remote Sensing of Environment},
+  volume  = {143},
+  pages   = {85--96},
+  year    = {2014},
+  doi     = {10.1016/j.rse.2013.12.008}
+}
+@misc{nasa_firms,
+  author       = {{NASA}},
+  title        = {Fire Information for Resource Management System ({FIRMS})},
+  year         = {2026},
+  howpublished = {\url{https://firms.modaps.eosdis.nasa.gov/}}
+}
+% [V vendor/design goal] ~5x5 m fires, 20 min revisit with 50+ satellites
+@misc{firesat,
+  author       = {{Muon Space} and {Earth Fire Alliance} and {Google}},
+  title        = {{FireSat}},
+  year         = {2026},
+  howpublished = {\url{https://www.muonspace.com/firesat}},
+  note         = {Design goals; accessed 2026-09-29.}
+}
+% [V government] 776 lookout towers (184 smart); first response 40 -> 11 min
+@misc{tarimorman2025,
+  author       = {{T.C. Tar{\i}m ve Orman Bakanl{\i}{\u{g}}{\i}}},
+  title        = {Orman Yang{\i}nlar{\i}yla {\.I}lgili {\.I}ddialar ve Ger{\c{c}}ekler},
+  year         = {2025},
+  howpublished = {\url{https://www.tarimorman.gov.tr/Belgeler/DMM_Orman%20Yang%C4%B1nlari%20ile%20Ilgili%20Iddialar%20ve%20Gercekler_270725.pdf}}
+}
+% [V]
+% [READ_FULL 2026-10-06] ~60,000 ha; four separate ignitions on 28 Jul 2021; "barely contained after 10 days" / "contained 2 weeks later"
+@article{ekberzade2025upinflames,
+  author  = {Ekberzade, Bikem and G{\"o}r{\"u}m, Tolga and Karabacak, Furkan and Akay, Semih Sami and \c{S}en, {\"O}mer L{\"u}tfi},
+  title   = {Up in Flames: The Human Factor behind a Megafire in {Mediterranean} {T}{\"u}rkiye},
+  journal = {npj Natural Hazards},
+  year    = {2025},
+  doi     = {10.1038/s44304-025-00120-4}
+}
+% [READ_FULL 2026-10-06] sec 3.1: Kuyucak fire mean ROS 5.00 km/h (4.27-5.71), NE wind 40-50 km/h, P. brutia
+@article{coskuner2026fire,
+  author  = {Coskuner, Kadir Alperen and Papavasileiou, Georgios and Giannaros, Theodore M. and Benali, Akli and Bilgili, Ertugrul},
+  title   = {Fire Behavior and Propagation of Twin Wildfires in a {Mediterranean} Landscape: A Case Study from {{\.{I}}zmir}, {T}{\"u}rkiye},
+  journal = {Fire},
+  volume  = {9},
+  pages   = {86},
+  year    = {2026},
+  doi     = {10.3390/fire9020086}
+}
+@article{camalan2023manavgat,
+  author  = {{\c{C}}amalan, G{\"u}lten and Ak{\i}l, Serhat and Pekin, Mehmet Ali},
+  title   = {Using {MEUS} and Meteorological Indices for Assessment of {Manavgat} Forest Fires},
+  journal = {European Journal of Forest Engineering},
+  volume  = {9},
+  number  = {1},
+  pages   = {10--25},
+  year    = {2023},
+  doi     = {10.33904/ejfe.1288070}
+}
+% [V] Manavgat 2021: ~60,000 ha forest burned (citing another source)
+@article{ersoy2025manavgat,
+  author  = {Ersoy, {\.I}. and others},
+  title   = {Multi-Criteria Forest Fire Danger Assessment System on {GIS} for {Mediterranean Manavgat}},
+  journal = {Sustainability},
+  volume  = {17},
+  number  = {5},
+  pages   = {1971},
+  year    = {2025},
+  doi     = {10.3390/su17051971}
+}
+% [U] Turkiye section not verified
+@techreport{effis2021,
+  author      = {San-Miguel-Ayanz, Jes{\'u}s and others},
+  title       = {Forest Fires in {Europe}, {Middle East} and {North Africa} 2021},
+  institution = {Joint Research Centre, European Commission},
+  year        = {2022},
+  doi         = {10.2760/34094}
+}
+
+% ------------------------------------------------------------ %
+% B. WSN / IoT forest-fire detection literature and fire physics
+% ------------------------------------------------------------ %
+% [V] Canonical surface fire spread model
+@techreport{rothermel1972spread,
+  author      = {Rothermel, Richard C.},
+  title       = {A Mathematical Model for Predicting Fire Spread in Wildland Fuels},
+  institution = {USDA Forest Service},
+  type        = {Research Paper},
+  number      = {INT-115},
+  year        = {1972}
+}
+% [V] Elliptical wave fire growth simulator
+@techreport{finney1998farsite,
+  author      = {Finney, Mark A.},
+  title       = {{FARSITE}: Fire Area Simulator -- Model Development and Evaluation},
+  institution = {USDA Forest Service},
+  type        = {Research Paper},
+  number      = {RMRS-RP-4},
+  year        = {1998}
+}
+% [V] Canonical plume rise and convective buoyancy model
+@book{briggs1969plume,
+  author    = {Briggs, Gary A.},
+  title     = {Plume Rise},
+  publisher = {U.S. Atomic Energy Commission Critical Review Series},
+  year      = {1969}
+}
+% [B]
+@article{alkhatib2014review,
+  author  = {Alkhatib, Ahmad A. A.},
+  title   = {A Review on Forest Fire Detection Techniques},
+  journal = {International Journal of Distributed Sensor Networks},
+  volume  = {10},
+  number  = {3},
+  pages   = {597368},
+  year    = {2014},
+  doi     = {10.1155/2014/597368}
+}
+% [B]
+@inproceedings{yu2005realtime,
+  author    = {Yu, Liyang and Wang, Neng and Meng, Xiaoqiao},
+  title     = {Real-time Forest Fire Detection with Wireless Sensor Networks},
+  booktitle = {Proc. Int. Conf. Wireless Communications, Networking and Mobile Computing (WCNM)},
+  volume    = {2},
+  pages     = {1214--1217},
+  year      = {2005},
+  doi       = {10.1109/WCNM.2005.1544272}
+}
+% [B]
+@inproceedings{hefeeda2007wireless,
+  author    = {Hefeeda, Mohamed and Bagheri, Majid},
+  title     = {Wireless Sensor Networks for Early Detection of Forest Fires},
+  booktitle = {Proc. IEEE Int. Conf. Mobile Adhoc and Sensor Systems (MASS)},
+  pages     = {1--6},
+  year      = {2007},
+  doi       = {10.1109/MOBHOC.2007.4428702}
+}
+% [B via dblp, no DOI] FWI-driven k-coverage
+@article{hefeeda2009forest,
+  author  = {Hefeeda, Mohamed and Bagheri, Majid},
+  title   = {Forest Fire Modeling and Early Detection using Wireless Sensor Networks},
+  journal = {Ad Hoc \& Sensor Wireless Networks},
+  volume  = {7},
+  number  = {3--4},
+  pages   = {169--224},
+  year    = {2009}
+}
+% [B]
+@article{lloret2009wireless,
+  author  = {Lloret, Jaime and Garcia, Miguel and Bri, Diana and Sendra, Sandra},
+  title   = {A Wireless Sensor Network Deployment for Rural and Forest Fire Detection and Verification},
+  journal = {Sensors},
+  volume  = {9},
+  number  = {11},
+  pages   = {8722--8747},
+  year    = {2009},
+  doi     = {10.3390/s91108722}
+}
+% [B] VERIFY author name order (Crossref: Kechar Bouabdellah, Houache Noureddine, Sekhri Larbi)
+@article{bouabdellah2013,
+  author  = {Bouabdellah, Kechar and Noureddine, Houache and Larbi, Sekhri},
+  title   = {Using Wireless Sensor Networks for Reliable Forest Fires Detection},
+  journal = {Procedia Computer Science},
+  volume  = {19},
+  pages   = {794--801},
+  year    = {2013},
+  doi     = {10.1016/j.procs.2013.06.104}
+}
+% [B] Turkish group (Bilkent)
+@article{aslan2012framework,
+  author  = {Aslan, Yunus Emre and Korpeoglu, Ibrahim and Ulusoy, {\"O}zg{\"u}r},
+  title   = {A Framework for Use of Wireless Sensor Networks in Forest Fire Detection and Monitoring},
+  journal = {Computers, Environment and Urban Systems},
+  volume  = {36},
+  number  = {6},
+  pages   = {614--625},
+  year    = {2012},
+  doi     = {10.1016/j.compenvurbsys.2012.03.002}
+}
+% [B]
+@article{ulucinar2014wifi,
+  author  = {Ulucinar, Alper Rifat and Korpeoglu, Ibrahim and Cetin, A. Enis},
+  title   = {A {Wi-Fi} Cluster Based Wireless Sensor Network Application and Deployment for Wildfire Detection},
+  journal = {International Journal of Distributed Sensor Networks},
+  volume  = {10},
+  pages   = {651957},
+  year    = {2014},
+  doi     = {10.1155/2014/651957}
+}
+% [V] node sensing range taken as 5 m; radio ~100 m (nRF24L01)
+@article{dampage2022forest,
+  author  = {Dampage, Udaya and Bandaranayake, Lumini and Wanasinghe, Ridma and Kottahachchi, Kishanga and Jayasanka, Bathiya},
+  title   = {Forest Fire Detection System using Wireless Sensor Networks and Machine Learning},
+  journal = {Scientific Reports},
+  volume  = {12},
+  pages   = {46},
+  year    = {2022},
+  doi     = {10.1038/s41598-021-03882-9}
+}
+% [V]
+@article{mohapatra2022early,
+  author  = {Mohapatra, Ankita and Trinh, Timothy},
+  title   = {Early Wildfire Detection Technologies in Practice---A Review},
+  journal = {Sustainability},
+  volume  = {14},
+  number  = {19},
+  pages   = {12270},
+  year    = {2022},
+  doi     = {10.3390/su141912270}
+}
+% [B]
+@article{bushnaq2021uav,
+  author  = {Bushnaq, Osama M. and Chaaban, Anas and Al-Naffouri, Tareq Y.},
+  title   = {The Role of {UAV-IoT} Networks in Future Wildfire Detection},
+  journal = {IEEE Internet of Things Journal},
+  volume  = {8},
+  number  = {23},
+  pages   = {16984--16999},
+  year    = {2021},
+  doi     = {10.1109/JIOT.2021.3077593}
+}
+% [V] LoRaWAN ignition sensors; IR flame sensor range 0.1-0.7 m (candle)
+@article{brito2020wireless,
+  author  = {Brito, Thadeu and Pereira, Ana I. and Lima, Jos{\'e} and Valente, Ant{\'o}nio},
+  title   = {Wireless Sensor Network for Ignitions Detection: An {IoT} Approach},
+  journal = {Electronics},
+  volume  = {9},
+  number  = {6},
+  pages   = {893},
+  year    = {2020},
+  doi     = {10.3390/electronics9060893}
+}
+% [V]
+@article{fonollosa2018chemical,
+  author  = {Fonollosa, Jordi and Sol{\'o}rzano, Ana and Marco, Santiago},
+  title   = {Chemical Sensor Systems and Associated Algorithms for Fire Detection: A Review},
+  journal = {Sensors},
+  volume  = {18},
+  number  = {2},
+  pages   = {553},
+  year    = {2018},
+  doi     = {10.3390/s18020553}
+}
+% [B]
+@article{solorzano2022early,
+  author  = {Sol{\'o}rzano, Ana and Eichmann, Jens and Fern{\'a}ndez, Luis and Ziems, Bernd and Jim{\'e}nez-Soto, Juan Manuel and Marco, Santiago and Fonollosa, Jordi},
+  title   = {Early Fire Detection Based on Gas Sensor Arrays: Multivariate Calibration and Validation},
+  journal = {Sensors and Actuators B: Chemical},
+  volume  = {352},
+  pages   = {130961},
+  year    = {2022},
+  doi     = {10.1016/j.snb.2021.130961}
+}
+% [V]
+@article{khan2022recent,
+  author  = {Khan, Fawad and Xu, Zhenyu and Sun, Jinhua and Khan, Fazal Maula and Ahmed, Adnan and Zhao, Yibing},
+  title   = {Recent Advances in Sensors for Fire Detection},
+  journal = {Sensors},
+  volume  = {22},
+  number  = {9},
+  pages   = {3310},
+  year    = {2022},
+  doi     = {10.3390/s22093310}
+}
+% [V] BME688 outdoor-like characterization (no fire test)
+@article{panzardi2025bme688,
+  author  = {Panzardi, Enza and Fort, Ada and Vignoli, Valerio and Cappelli, Irene and Gaioni, Luigi and Verzeroli, Marco and Dello Iacono, Salvatore and Flammini, Alessandra},
+  title   = {Assessing {BME688} Sensor Performance under Controlled Outdoor-Like Environmental Conditions},
+  journal = {Sensors},
+  volume  = {25},
+  number  = {23},
+  pages   = {7102},
+  year    = {2025},
+  doi     = {10.3390/s25237102}
+}
+% [B] content not read -- likely closest to our WP1; get full text
+@inproceedings{brugera2025early,
+  author    = {Brugera, C. and Mel{\'e}ndez, F. and L{\'o}pez Luna, {\'A}. and Arroyo, P. and Gonz{\'a}lez, V. and Su{\'a}rez, J. I. and Herrero, J. L. and Perea, J. M. and Lozano, J.},
+  title     = {Early Wildfire Detection with Metal Oxide Gas Sensors},
+  booktitle = {Proc. 7th Experiment@ International Conference},
+  pages     = {199--204},
+  year      = {2025},
+  doi       = {10.1109/EXP.AT2565440.2025.11348369}
+}
+% [B]
+@inproceedings{oliveira2025ai,
+  author    = {Oliveira, F. and Pioli, L. and De Macedo, D. D. J. and Costa, D. G.},
+  title     = {{AI}-Driven Low-Cost Sensors for Wildfire Detection},
+  booktitle = {Proc. IEEE Symposium on Computers and Communications (ISCC)},
+  pages     = {1--6},
+  year      = {2025},
+  doi       = {10.1109/ISCC65549.2025.11326193}
+}
+% [V]
+@article{holder2020field,
+  author  = {Holder, Amara L. and Mebust, Anna K. and Maghran, Lauren A. and McGown, Michael R. and Stewart, Kathleen E. and Vallano, Dena M. and Elleman, Robert A. and Baker, Kirk R.},
+  title   = {Field Evaluation of Low-Cost Particulate Matter Sensors for Measuring Wildfire Smoke},
+  journal = {Sensors},
+  volume  = {20},
+  number  = {17},
+  pages   = {4796},
+  year    = {2020},
+  doi     = {10.3390/s20174796}
+}
+% [V Treesearch]
+@techreport{rothermel1972,
+  author      = {Rothermel, Richard C.},
+  title       = {A Mathematical Model for Predicting Fire Spread in Wildland Fuels},
+  institution = {USDA Forest Service, Intermountain Forest and Range Experiment Station},
+  type        = {Research Paper},
+  number      = {INT-115},
+  year        = {1972}
+}
+% [V Treesearch]
+% [U] VERIFY
+@techreport{vanwagner1987fwi,
+  author      = {Van Wagner, Charles E.},
+  title       = {Development and Structure of the {Canadian} Forest Fire Weather Index System},
+  institution = {Canadian Forestry Service},
+  type        = {Forestry Technical Report},
+  number      = {35},
+  year        = {1987}
+}
+% [V] P. brutia: ROS 0.3-3.75 m/min, 35 experimental fires
+@article{kucuk2012rates,
+  author  = {K{\"u}{\c{c}}{\"u}k, {\"O}mer and Bilgili, Ertu{\u{g}}rul and Bulut, Sinan and Fernandes, Paulo M.},
+  title   = {Rates of Surface Fire Spread in a Young {Calabrian} Pine ({Pinus brutia} {Ten.}) Plantation},
+  journal = {Environmental Engineering and Management Journal},
+  volume  = {11},
+  number  = {8},
+  pages   = {1475--1480},
+  year    = {2012},
+  doi     = {10.30638/eemj.2012.184}
+}
+% [V] ROS ~ 10 % of 10-m open wind speed
+@article{cruz2019ten,
+  author  = {Cruz, Miguel G. and Alexander, Martin E.},
+  title   = {The 10\% Wind Speed Rule of Thumb for Estimating a Wildfire's Forward Rate of Spread in Forests and Shrublands},
+  journal = {Annals of Forest Science},
+  volume  = {76},
+  pages   = {44},
+  year    = {2019},
+  doi     = {10.1007/s13595-019-0829-8}
+}
+% [V] nodes inside fire: protective sock extends survival to minutes
+@article{antoine2009performance,
+  author  = {Antoine-Santoni, Thierry and Santucci, Jean-Fran{\c{c}}ois and De Gentili, Emmanuelle and Silvani, Xavier and Morandini, Fr{\'e}d{\'e}ric},
+  title   = {Performance of a Protected Wireless Sensor Network in a Fire. Analysis of Fire Spread and Data Transmission},
+  journal = {Sensors},
+  volume  = {9},
+  number  = {8},
+  pages   = {5878--5893},
+  year    = {2009},
+  doi     = {10.3390/s90805878}
+}
+% [B]
+@inproceedings{corke2004uav,
+  author    = {Corke, Peter and Hrabar, Stefan and Peterson, Ron and Rus, Daniela and Saripalli, Srikanth and Sukhatme, Gaurav},
+  title     = {Autonomous Deployment and Repair of a Sensor Network using an Unmanned Aerial Vehicle},
+  booktitle = {Proc. IEEE Int. Conf. Robotics and Automation (ICRA)},
+  volume    = {4},
+  pages     = {3602--3608},
+  year      = {2004},
+  doi       = {10.1109/ROBOT.2004.1308811}
+}
+% [B]
+@inproceedings{doolin2005wireless,
+  author    = {Doolin, David M. and Sitar, Nicholas},
+  title     = {Wireless Sensors for Wildfire Monitoring},
+  booktitle = {Proc. SPIE 5765, Smart Structures and Materials},
+  pages     = {477},
+  year      = {2005},
+  doi       = {10.1117/12.605655}
+}
+% [B]
+@inproceedings{hartung2006firewxnet,
+  author    = {Hartung, Carl and Han, Richard and Seielstad, Carl and Holbrook, Saxon},
+  title     = {{FireWxNet}: A Multi-Tiered Portable Wireless System for Monitoring Weather Conditions in Wildland Fire Environments},
+  booktitle = {Proc. ACM MobiSys},
+  pages     = {28--41},
+  year      = {2006},
+  doi       = {10.1145/1134680.1134685}
+}
+% [B] closest prior work to our density/latency model -- read first
+% [READ_FULL pdf 2026-10-06] sec 3: MEIS hydrogen sensors; 0.5 m2 smouldering fire seen at 25 m (3/8 sensors, near detection limit); 2 m2 fire at 25 and 105 m
+@article{noerthemann2013early,
+  author  = {N{\"o}rthemann, K. and Bienge, J.-E. and M{\"u}ller, J. and Moritz, W.},
+  title   = {Early Forest Fire Detection Using Low-Energy Hydrogen Sensors},
+  journal = {Journal of Sensors and Sensor Systems},
+  volume  = {2},
+  pages   = {171--177},
+  year    = {2013},
+  doi     = {10.5194/jsss-2-171-2013}
+}
+% [READ_FULL abstract (arXiv 0810.5763); metadata from Crossref 2026-10-06] burned area at detection ~ exponential
+@article{fierens2009number,
+  author  = {Fierens, Pablo I.},
+  title   = {Number of Sensors versus Time to Detection in Wildfires},
+  journal = {International Journal of Wildland Fire},
+  volume  = {18},
+  number  = {7},
+  pages   = {825--829},
+  year    = {2009},
+  doi     = {10.1071/WF07137}
+}
+@inproceedings{pandey2018modeling,
+  author    = {Pandey, K. and Gupta, A.},
+  title     = {Modeling and Analysis of Wildfire Detection using Wireless Sensor Network with {Poisson} Deployment},
+  booktitle = {Proc. IEEE Int. Conf. Advanced Networks and Telecommunications Systems (ANTS)},
+  pages     = {1--6},
+  year      = {2018},
+  doi       = {10.1109/ANTS.2018.8710055}
+}
+% [V]
+@article{azevedo2021optimum,
+  author  = {Azevedo, Beatriz Flamia and Brito, Thadeu and Lima, Jos{\'e} and Pereira, Ana I.},
+  title   = {Optimum Sensors Allocation for a Forest Fires Monitoring System},
+  journal = {Forests},
+  volume  = {12},
+  number  = {4},
+  pages   = {453},
+  year    = {2021},
+  doi     = {10.3390/f12040453}
+}
+% [B]
+@inproceedings{sooriarachchi2024model,
+  author    = {Sooriarachchi, V. P. and Jayakody, D. N. K.},
+  title     = {Model for Advanced Sensor Placement in Wildfire Detection Systems},
+  booktitle = {Proc. IEEE Wireless Communications and Networking Conference (WCNC)},
+  pages     = {1--6},
+  year      = {2024},
+  doi       = {10.1109/WCNC57260.2024.10570764}
+}
+
+% ------------------------------------------------------------ %
+% C. Radio propagation, regulation, connectivity, MAC
+% ------------------------------------------------------------ %
+% [READ_FULL 2026-10-06] P.833-10 (09/2021), in force; sec 2.1 eq.(1), Table 1; no "10-15 dB trunk" statement (REVIEW #21, #34)
+@techreport{itur_p833,
+  author      = {{ITU-R}},
+  title       = {Attenuation in Vegetation},
+  institution = {International Telecommunication Union},
+  type        = {Recommendation},
+  number      = {ITU-R P.833-10},
+  month       = sep,
+  year        = {2021},
+  url         = {https://www.itu.int/rec/R-REC-P.833}
+}
+% [READ_FULL (WF) 2026-10-06] 923 MHz LoRa, tropical forest (Thailand): n = 3.22 forest, 2.31 LOS; Tx 1.7 m, GW 8 m
+@article{boonlom2026experimental,
+  author  = {Boonlom, K. and Khonrang, J. and Akkaraekthalin, P. and Chudpooti, N.},
+  title   = {Experimental Comparison and Empirical Path Loss Modeling of {LoRa} Communication in Line-of-Sight and Forest Environments at 923 {MHz}},
+  journal = {Sensors},
+  volume  = {26},
+  number  = {10},
+  pages   = {3192},
+  year    = {2026},
+  doi     = {10.3390/s26103192}
+}
+}
+% [V] 433 MHz foliage: n = 2.34-2.9, per-trunk/per-canopy losses
+@article{anzum2022multiwall,
+  author  = {Anzum, Rabeya and Habaebi, Mohamed Hadi and Islam, Md. Rafiqul and Hakim, Galang P. N. and Khandaker, Mayeen Uddin and Osman, Hamid and Alamri, Sultan and AbdElrahim, Elrashid},
+  title   = {A Multiwall Path-Loss Prediction Model Using 433 {MHz} {LoRa-WAN} Frequency to Characterize Foliage's Influence in a {Malaysian} Palm Oil Plantation Environment},
+  journal = {Sensors},
+  volume  = {22},
+  number  = {14},
+  pages   = {5397},
+  year    = {2022},
+  doi     = {10.3390/s22145397}
+}
+% [V DOI; co-authors U] n ~ 2.5-4.2, sigma ~ 5 dB, heights 0.5-3 m
+@article{wu2020lai,
+  author  = {Wu, Yuchen and others},
+  title   = {A Model with Leaf Area Index and Trunk Diameter for {LoRaWAN} Radio Propagation in {Eastern China} Mixed Forest},
+  journal = {Journal of Sensors},
+  volume  = {2020},
+  pages   = {2687148},
+  year    = {2020},
+  doi     = {10.1155/2020/2687148}
+}
+% [READ_FULL pdf 2026-10-06] sec 5.1.1: SF12 forest range 250 m at RSSI -124 dBm (915 MHz, BW 500 kHz, 14 dBm, 7 dBi monopole); author list from the PDF
+@article{ferreira2020study,
+  author  = {Ferreira, Ana Elisa and Ortiz, Fernando M. and Costa, Lu{\'i}s Henrique M. K. and Foubert, Brandon and Amadou, Ibrahim and Mitton, Nathalie},
+  title   = {A Study of the {LoRa} Signal Propagation in Forest, Urban, and Suburban Environments},
+  journal = {Annals of Telecommunications},
+  volume  = {75},
+  pages   = {333--351},
+  year    = {2020},
+  doi     = {10.1007/s12243-020-00789-w}
+}
+% [V]
+@inproceedings{avila2019evaluation,
+  author    = {Avila-Campos, Paul and Astudillo-Salinas, Fabian and Vazquez-Rodas, Andres and Araujo, Alvaro},
+  title     = {Evaluation of {LoRaWAN} Transmission Range for Wireless Sensor Networks in Riparian Forests},
+  booktitle = {Proc. 22nd ACM Int. Conf. Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM)},
+  pages     = {199--206},
+  year      = {2019},
+  doi       = {10.1145/3345768.3355934}
+}
+% [V]
+@article{callebaut2020characterization,
+  author  = {Callebaut, Gilles and Van der Perre, Liesbet},
+  title   = {Characterization of {LoRa} Point-to-Point Path Loss: Measurement Campaigns and Modeling Considering Censored Data},
+  journal = {IEEE Internet of Things Journal},
+  volume  = {7},
+  number  = {3},
+  pages   = {1910--1918},
+  year    = {2020},
+  doi     = {10.1109/JIOT.2019.2953804}
+}
+% [V]
+@inproceedings{petajajarvi2015coverage,
+  author    = {Pet{\"a}j{\"a}j{\"a}rvi, Juha and Mikhaylov, Konstantin and Roivainen, Antti and H{\"a}nninen, Tuomo and Pettissalo, Marko},
+  title     = {On the Coverage of {LPWANs}: Range Evaluation and Channel Attenuation Model for {LoRa} Technology},
+  booktitle = {Proc. 14th Int. Conf. ITS Telecommunications (ITST)},
+  pages     = {55--59},
+  year      = {2015},
+  doi       = {10.1109/ITST.2015.7377400}
+}
+% [V]
+@inproceedings{bor2016lora,
+  author    = {Bor, Martin C. and Roedig, Utz and Voigt, Thiemo and Alonso, Juan M.},
+  title     = {Do {LoRa} Low-Power Wide-Area Networks Scale?},
+  booktitle = {Proc. 19th ACM MSWiM},
+  pages     = {59--67},
+  year      = {2016},
+  doi       = {10.1145/2988287.2989163}
+}
+% [U] no DOI (report)
+@techreport{weissberger1982,
+  author      = {Weissberger, Michael A.},
+  title       = {An Initial Critical Summary of Models for Predicting the Attenuation of Radio Waves by Trees},
+  institution = {Electromagnetic Compatibility Analysis Center},
+  number      = {ESD-TR-81-101},
+  year        = {1982}
+}
+% [V]
+@article{alnuaimi1998measurements,
+  author  = {Al-Nuaimi, M. O. and Stephens, R. B. L.},
+  title   = {Measurements and Prediction Model Optimisation for Signal Attenuation in Vegetation Media at Centimetre Wave Frequencies},
+  journal = {IEE Proceedings - Microwaves, Antennas and Propagation},
+  volume  = {145},
+  number  = {3},
+  pages   = {201--206},
+  year    = {1998},
+  doi     = {10.1049/ip-map:19981883}
+}
+% [V]
+@article{tamir1967radio,
+  author  = {Tamir, Theodor},
+  title   = {On Radio-Wave Propagation in Forest Environments},
+  journal = {IEEE Transactions on Antennas and Propagation},
+  volume  = {15},
+  number  = {6},
+  pages   = {806--817},
+  year    = {1967},
+  doi     = {10.1109/TAP.1967.1139054}
+}
+% [V]
+@article{meng2009empirical,
+  author  = {Meng, Yu Song and Lee, Yee Hui and Ng, Boon Chong},
+  title   = {Empirical Near Ground Path Loss Modeling in a Forest at {VHF} and {UHF} Bands},
+  journal = {IEEE Transactions on Antennas and Propagation},
+  volume  = {57},
+  number  = {5},
+  pages   = {1461--1468},
+  year    = {2009},
+  doi     = {10.1109/TAP.2009.2016703}
+}
+% [V]
+@article{azevedo2011empirical,
+  author  = {Azevedo, Joaquim A. R. and Santos, Filipe E. S.},
+  title   = {An Empirical Propagation Model for Forest Environments at Tree Trunk Level},
+  journal = {IEEE Transactions on Antennas and Propagation},
+  volume  = {59},
+  number  = {6},
+  pages   = {2357--2367},
+  year    = {2011},
+  doi     = {10.1109/TAP.2011.2143664}
+}
+% [V]
+@article{gayfernandez2010propagation,
+  author  = {Gay-Fern{\'a}ndez, Jos{\'e} A. and Garc{\'i}a S{\'a}nchez, Manuel and Cui{\~n}as, I{\~n}igo and Alejos, Ana Vazquez and S{\'a}nchez, Javier Garc{\'i}a and Miranda-Sierra, Jos{\'e} L.},
+  title   = {Propagation Analysis and Deployment of a Wireless Sensor Network in a Forest},
+  journal = {Progress In Electromagnetics Research},
+  volume  = {106},
+  pages   = {121--145},
+  year    = {2010},
+  doi     = {10.2528/PIER10040806}
+}
+% [V] sensitivities (SF7 -124 / SF12 -137 dBm at 125 kHz), TX/RX/sleep currents
+@manual{sx1262ds,
+  author       = {{Semtech Corporation}},
+  title        = {{SX1261/2} Long Range, Low Power, sub-{GHz} {RF} Transceiver, Datasheet Rev. 1.2 ({DS.SX1261-2.W.APP})},
+  month        = jun,
+  year         = {2019}
+}
+% [V]
+@manual{etsi300220,
+  author       = {{ETSI}},
+  title        = {{EN} 300 220-2 V3.2.1: Short Range Devices ({SRD}) operating in the frequency range 25 {MHz} to 1000 {MHz}; Part 2},
+  year         = {2018}
+}
+% [READ_FULL 2026-10-06] sec 5.4.1: duty cycle observed over Tobs = 1 h unless otherwise specified
+@manual{etsi300220p1,
+  author       = {{ETSI}},
+  title        = {{EN} 300 220-1 V3.1.1: Short Range Devices ({SRD}) operating in the frequency range 25 {MHz} to 1000 {MHz}; Part 1: Technical characteristics and methods of measurement},
+  month        = feb,
+  year         = {2017}
+}
+% [READ_FULL 2026-10-06] row 20: 868-868.6 MHz, 25 mW e.r.p., <=1 % duty cycle or LBT+AFA; document date not printed
+@misc{btk_sinif1,
+  author       = {{Bilgi Teknolojileri ve \.{I}leti\c{s}im Kurumu (BTK)}},
+  title        = {S{\i}n{\i}f 1 Cihaz Kategorileri ve Frekans Bandlar{\i} (Teknik {\"O}l{\c{c}}{\"u}tler)},
+  year         = {n.d.},
+  howpublished = {\url{https://www.btk.gov.tr/uploads/pages/sinif1-teknik-olcut.pdf}},
+  note         = {Accessed 2026-10-06}
+}
+% [V]
+@inproceedings{gupta1998critical,
+  author    = {Gupta, Piyush and Kumar, P. R.},
+  title     = {Critical Power for Asymptotic Connectivity},
+  booktitle = {Proc. 37th IEEE Conf. Decision and Control (CDC)},
+  volume    = {1},
+  pages     = {1106--1110},
+  year      = {1998},
+  doi       = {10.1109/CDC.1998.760846}
+}
+% [V]
+@article{penrose1997longest,
+  author  = {Penrose, Mathew D.},
+  title   = {The Longest Edge of the Random Minimal Spanning Tree},
+  journal = {The Annals of Applied Probability},
+  volume  = {7},
+  number  = {2},
+  pages   = {340--361},
+  year    = {1997},
+  doi     = {10.1214/aoap/1034625335}
+}
+% [V]
+@article{penrose1999kconn,
+  author  = {Penrose, Mathew D.},
+  title   = {On k-Connectivity for a Geometric Random Graph},
+  journal = {Random Structures \& Algorithms},
+  volume  = {15},
+  number  = {2},
+  pages   = {145--164},
+  year    = {1999},
+  doi     = {10.1002/(SICI)1098-2418(199909)15:2<145::AID-RSA2>3.0.CO;2-G}
+}
+% [V]
+@inproceedings{bettstetter2002minimum,
+  author    = {Bettstetter, Christian},
+  title     = {On the Minimum Node Degree and Connectivity of a Wireless Multihop Network},
+  booktitle = {Proc. ACM MobiHoc},
+  pages     = {80--91},
+  year      = {2002},
+  doi       = {10.1145/513800.513811}
+}
+% [V]
+@article{bettstetter2005shadow,
+  author  = {Bettstetter, Christian and Hartmann, Christian},
+  title   = {Connectivity of Wireless Multihop Networks in a Shadow Fading Environment},
+  journal = {Wireless Networks},
+  volume  = {11},
+  number  = {5},
+  pages   = {571--579},
+  year    = {2005},
+  doi     = {10.1007/s11276-005-3513-x}
+}
+% [V]
+@article{hekmat2006connectivity,
+  author  = {Hekmat, Ramin and Van Mieghem, Piet},
+  title   = {Connectivity in Wireless Ad-hoc Networks with a Log-normal Radio Model},
+  journal = {Mobile Networks and Applications},
+  volume  = {11},
+  number  = {3},
+  pages   = {351--360},
+  year    = {2006},
+  doi     = {10.1007/s11036-006-5188-7}
+}
+% [V]
+@article{miorandi2008impact,
+  author  = {Miorandi, Daniele and Altman, Eitan and Alfano, Giuseppa},
+  title   = {The Impact of Channel Randomness on Coverage and Connectivity of Ad Hoc and Sensor Networks},
+  journal = {IEEE Transactions on Wireless Communications},
+  volume  = {7},
+  number  = {3},
+  pages   = {1062--1072},
+  year    = {2008},
+  doi     = {10.1109/TWC.2007.060842}
+}
+% [V]
+@article{quintanilla2000efficient,
+  author  = {Quintanilla, John and Torquato, Salvatore and Ziff, Robert M.},
+  title   = {Efficient Measurement of the Percolation Threshold for Fully Penetrable Discs},
+  journal = {Journal of Physics A: Mathematical and General},
+  volume  = {33},
+  number  = {42},
+  pages   = {L399--L407},
+  year    = {2000},
+  doi     = {10.1088/0305-4470/33/42/104}
+}
+% [V]
+@article{xing2005integrated,
+  author  = {Xing, Guoliang and Wang, Xiaorui and Zhang, Yuanfang and Lu, Chenyang and Pless, Robert and Gill, Christopher},
+  title   = {Integrated Coverage and Connectivity Configuration for Energy Conservation in Sensor Networks},
+  journal = {ACM Transactions on Sensor Networks},
+  volume  = {1},
+  number  = {1},
+  pages   = {36--72},
+  year    = {2005},
+  doi     = {10.1145/1077391.1077394}
+}
+% [V]
+@inproceedings{kumar2005barrier,
+  author    = {Kumar, Santosh and Lai, Ten H. and Arora, Anish},
+  title     = {Barrier Coverage with Wireless Sensors},
+  booktitle = {Proc. ACM MobiCom},
+  pages     = {284--298},
+  year      = {2005},
+  doi       = {10.1145/1080829.1080859}
+}
+% [V]
+@article{shakkottai2005unreliable,
+  author  = {Shakkottai, Sanjay and Srikant, R. and Shroff, Ness B.},
+  title   = {Unreliable Sensor Grids: Coverage, Connectivity and Diameter},
+  journal = {Ad Hoc Networks},
+  volume  = {3},
+  number  = {6},
+  pages   = {702--716},
+  year    = {2005},
+  doi     = {10.1016/j.adhoc.2004.02.001}
+}
+% [V]
+@inproceedings{polastre2004bmac,
+  author    = {Polastre, Joseph and Hill, Jason and Culler, David},
+  title     = {Versatile Low Power Media Access for Wireless Sensor Networks},
+  booktitle = {Proc. ACM SenSys},
+  pages     = {95--107},
+  year      = {2004},
+  doi       = {10.1145/1031495.1031508}
+}
+% [V]
+@inproceedings{buettner2006xmac,
+  author    = {Buettner, Michael and Yee, Gary V. and Anderson, Eric and Han, Richard},
+  title     = {{X-MAC}: A Short Preamble {MAC} Protocol for Duty-Cycled Wireless Sensor Networks},
+  booktitle = {Proc. ACM SenSys},
+  pages     = {307--320},
+  year      = {2006},
+  doi       = {10.1145/1182807.1182838}
+}
+% [V]
+@article{piyare2017wakeup,
+  author  = {Piyare, Rajeev and Murphy, Amy L. and Kiraly, Csaba and Tosato, Pietro and Brunelli, Davide},
+  title   = {Ultra Low Power Wake-Up Radios: A Hardware and Networking Survey},
+  journal = {IEEE Communications Surveys \& Tutorials},
+  volume  = {19},
+  number  = {4},
+  pages   = {2117--2157},
+  year    = {2017},
+  doi     = {10.1109/COMST.2017.2728092}
+}
+% [V]
+@article{liao2017multihop,
+  author  = {Liao, Chun-Hao and Zhu, Guibing and Kuwabara, Daiki and Suzuki, Makoto and Morikawa, Hiroyuki},
+  title   = {Multi-Hop {LoRa} Networks Enabled by Concurrent Transmission},
+  journal = {IEEE Access},
+  volume  = {5},
+  pages   = {21430--21446},
+  year    = {2017},
+  doi     = {10.1109/ACCESS.2017.2755858}
+}
+% [V]
+@article{cotrim2020lorawan,
+  author  = {Cotrim, Jonathan de Carvalho Silva and Kleinschmidt, Jo{\~a}o Henrique},
+  title   = {{LoRaWAN} Mesh Networks: A Review and Classification of Multihop Communication},
+  journal = {Sensors},
+  volume  = {20},
+  number  = {15},
+  pages   = {4273},
+  year    = {2020},
+  doi     = {10.3390/s20154273}
+}
+
+% ------------------------------------------------------------ %
+% D. Energy, hardware datasheets, harvesting
+% ------------------------------------------------------------ %
+% [READ_FULL 2026-10-06, Farnell mirror of the production datasheet] Table 42 Stop2 vs temperature, sec 3 SRAM retention in Stop2,
+% Table 66 flash endurance 10 kcycles, sec 3.21 AES (128/256-bit; ECB, CBC, CTR, GCM, GMAC, CCM), sec 3.24 tamper, RDP levels
+@manual{stm32wle5ds,
+  author = {{STMicroelectronics}},
+  title  = {{STM32WLE5xx} Multiprotocol {LPWAN} 32-bit {Arm Cortex-M4} {MCUs}, {LoRa}, (G){FSK}, (G){MSK}, {BPSK}, up to 256\,{KB} Flash, 64\,{KB} {SRAM}, Datasheet {DS13105} Rev.~6},
+  month  = jul,
+  year   = {2020}
+}
+% [READ_FULL 2026-10-06] Rev 1.3 (Feb 2024): ULP 0.09 mA at 300 s (VDD <= 1.8 V, 25 C); tau33-63 ULP 92 s (Table 2)
+@manual{bme688ds,
+  author = {{Bosch Sensortec}},
+  title  = {{BME688} Datasheet, Document {BST-BME688-DS000-03}, Revision 1.3},
+  month  = feb,
+  year   = {2024}
+}
+@manual{sgp41ds,
+  author = {{Sensirion AG}},
+  title  = {{SGP41} {VOC} and {NOx} Sensor, Datasheet},
+  year   = {2022}
+}
+@manual{sht4xds,
+  author = {{Sensirion AG}},
+  title  = {{SHT4x} Humidity and Temperature Sensor, Datasheet},
+  year   = {2022}
+}
+% [U] VERIFY
+@article{chazdon1991sunflecks,
+  author  = {Chazdon, Robin L. and Pearcy, Robert W.},
+  title   = {The Importance of Sunflecks for Forest Understory Plants},
+  journal = {BioScience},
+  volume  = {41},
+  number  = {11},
+  pages   = {760--766},
+  year    = {1991},
+  doi     = {10.2307/1311725}
+}
+% [U] VERIFY
+@inproceedings{taneja2008microsolar,
+  author    = {Taneja, Jay and Jeong, Jaein and Culler, David},
+  title     = {Design, Modeling, and Capacity Planning for Micro-Solar Power Sensor Networks},
+  booktitle = {Proc. Int. Conf. Information Processing in Sensor Networks (IPSN)},
+  pages     = {407--418},
+  year      = {2008},
+  doi       = {10.1109/IPSN.2008.67}
+}
+% [V] tree bio-potential: nW-level -> not a power source
+@article{love2008source,
+  author  = {Love, Christopher J. and Zhang, Shuguang and Mershin, Andreas},
+  title   = {Source of Sustained Voltage Difference between the Xylem of a Potted {Ficus benjamina} Tree and Its Soil},
+  journal = {PLoS ONE},
+  volume  = {3},
+  number  = {8},
+  pages   = {e2963},
+  year    = {2008},
+  doi     = {10.1371/journal.pone.0002963}
+}
+% [V]
+@article{casals2017modeling,
+  author  = {Casals, Lluís and Mir, Bernat and Vidal, Rafael and Gomez, Carles},
+  title   = {Modeling the Energy Performance of {LoRaWAN}},
+  journal = {Sensors},
+  volume  = {17},
+  number  = {10},
+  pages   = {2364},
+  year    = {2017},
+  doi     = {10.3390/s17102364}
+}
+% [V]
+@article{bouguera2018energy,
+  author  = {Bouguera, Taoufik and Diouris, Jean-Fran{\c{c}}ois and Chaillout, Jean-Jacques and Jaouadi, Randa and Andrieux, Guillaume},
+  title   = {Energy Consumption Model for Sensor Nodes Based on {LoRa} and {LoRaWAN}},
+  journal = {Sensors},
+  volume  = {18},
+  number  = {7},
+  pages   = {2104},
+  year    = {2018},
+  doi     = {10.3390/s18072104}
+}
+% [V]
+@article{maudet2021refined,
+  author  = {Maudet, Sébastien and Andrieux, Guillaume and Chevillon, Romain and Diouris, Jean-Fran{\c{c}}ois},
+  title   = {Refined Node Energy Consumption Modeling in a {LoRaWAN} Network},
+  journal = {Sensors},
+  volume  = {21},
+  number  = {19},
+  pages   = {6398},
+  year    = {2021},
+  doi     = {10.3390/s21196398}
+}
+
+% ------------------------------------------------------------ %
+% E. Security
+% ------------------------------------------------------------ %
+% [V]
+@techreport{nist2025sp80232,
+  author      = {S{\"o}nmez Turan, Meltem and McKay, Kerry A. and Chang, Donghoon and Kang, Jinkeon and Kelsey, John},
+  title       = {Ascon-Based Lightweight Cryptography Standards for Constrained Devices: Authenticated Encryption, Hash, and Extendable Output Functions},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST Special Publication},
+  number      = {SP 800-232},
+  year        = {2025},
+  doi         = {10.6028/NIST.SP.800-232}
+}
+% [V]
+% [READ_FULL pdf 2026-10-06, sparkfun mirror] Table 1 cold start 24-29 s; Table 13 acquisition VCC 6.5-10.5 mA + V_IO 2.2-2.3 mA
+@manual{maxm10sds,
+  author = {{u-blox}},
+  title  = {{MAX-M10S} Standard Precision {GNSS} Module, Data Sheet {UBX-20035208}, Revision {R02} (Advance Information)},
+  month  = apr,
+  year   = {2021}
+}
+% [READ_FULL 2026-10-06] sec 5.3, App. A.2 (t in {4..16} B, n in {7..13} B, nonce unique per key), App. B.1 (forgery <= 2^-Tlen per try)
+@techreport{nist80038c,
+  author      = {Dworkin, Morris},
+  title       = {Recommendation for Block Cipher Modes of Operation: The {CCM} Mode for Authentication and Confidentiality},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST Special Publication},
+  number      = {SP 800-38C},
+  month       = may,
+  year        = {2004}
+}
+% [READ_FULL 2026-10-06] sec 4.1.3, Tables 1 and 6: AES-128 category 1, AES-256 category 5 (initial public draft)
+@techreport{nistir8547,
+  author      = {Moody, Dustin and Perlner, Ray and Regenscheid, Andrew and Robinson, Angela and Cooper, David},
+  title       = {Transition to Post-Quantum Cryptography Standards (Initial Public Draft)},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST Internal Report},
+  number      = {NIST IR 8547 ipd},
+  month       = nov,
+  year        = {2024}
+}
+% [READ_FULL abstract, arXiv quant-ph/9605043, 2026-10-06] O(sqrt N) search
+@inproceedings{grover1996fast,
+  author    = {Grover, Lov K.},
+  title     = {A Fast Quantum Mechanical Algorithm for Database Search},
+  booktitle = {Proc. 28th Annual ACM Symposium on the Theory of Computing (STOC)},
+  pages     = {212--219},
+  year      = {1996}
+}
+% [READ_FULL abstract, usenix.org, 2026-10-06] STM32F0: RDP1 cold-boot stepping, RDP downgrade, debug race condition
+@inproceedings{obermaier2017shedding,
+  author    = {Obermaier, Johannes and Tatschner, Stefan},
+  title     = {Shedding too much Light on a Microcontroller's Firmware Protection},
+  booktitle = {Proc. 11th USENIX Workshop on Offensive Technologies (WOOT)},
+  month     = aug,
+  year      = {2017}
+}
+@techreport{nistir8454,
+  author      = {S{\"o}nmez Turan, Meltem and others},
+  title       = {Status Report on the Final Round of the {NIST} Lightweight Cryptography Standardization Process},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST Internal Report},
+  number      = {NIST IR 8454},
+  year        = {2023},
+  doi         = {10.6028/NIST.IR.8454}
+}
+% [V]
+@article{dobraunig2021ascon,
+  author  = {Dobraunig, Christoph and Eichlseder, Maria and Mendel, Florian and Schl{\"a}ffer, Martin},
+  title   = {Ascon v1.2: Lightweight Authenticated Encryption and Hashing},
+  journal = {Journal of Cryptology},
+  volume  = {34},
+  number  = {3},
+  pages   = {33},
+  year    = {2021},
+  doi     = {10.1007/s00145-021-09398-9}
+}
+% [V]
+@inproceedings{renner2020hil,
+  author    = {Renner, Sebastian and Pozzobon, Enrico and Mottok, J{\"u}rgen},
+  title     = {A Hardware in the Loop Benchmark Suite to Evaluate {NIST} {LWC} Ciphers on Microcontrollers},
+  booktitle = {Information and Communications Security (ICICS 2020)},
+  series    = {LNCS},
+  volume    = {12282},
+  pages     = {495--509},
+  publisher = {Springer},
+  year      = {2020},
+  doi       = {10.1007/978-3-030-61078-4_28}
+}
+% [V]
+% TODO-VERIFY (E9, R17): page shows "Generated on Mon Jun 21 2021"; year below says 2023
+@misc{weatherley_lwc,
+  author       = {Weatherley, Rhys},
+  title        = {Performance of the {NIST} Lightweight Cryptography Finalists on Microcontrollers},
+  year         = {2023},
+  howpublished = {\url{https://rweather.github.io/lwc-finalists/performance.html}}
+}
+% [U] VERIFY exact release date
+@manual{lorawan104,
+  author = {{LoRa Alliance}},
+  title  = {{TS001-1.0.4} {LoRaWAN} {L2} 1.0.4 Specification},
+  year   = {2020}
+}
+% [U] VERIFY
+@inproceedings{butun2018lorawan,
+  author    = {Butun, Ismail and Pereira, Nuno and Gidlund, Mikael},
+  title     = {Analysis of {LoRaWAN} v1.1 Security},
+  booktitle = {Proc. 4th ACM MobiHoc Workshop on Experiences with the Design and Implementation of Smart Objects (SMARTOBJECTS)},
+  year      = {2018},
+  doi       = {10.1145/3213299.3213304}
+}
+% [U] VERIFY
+@inproceedings{yang2018security,
+  author    = {Yang, Xueying and Karampatzakis, Evgenios and Doerr, Christian and Kuipers, Fernando},
+  title     = {Security Vulnerabilities in {LoRaWAN}},
+  booktitle = {Proc. IEEE/ACM Int. Conf. Internet-of-Things Design and Implementation (IoTDI)},
+  pages     = {129--140},
+  year      = {2018},
+  doi       = {10.1109/IoTDI.2018.00022}
+}
+% [V content; DOI U]
+@inproceedings{karlof2004tinysec,
+  author    = {Karlof, Chris and Sastry, Naveen and Wagner, David},
+  title     = {{TinySec}: A Link Layer Security Architecture for Wireless Sensor Networks},
+  booktitle = {Proc. ACM SenSys},
+  year      = {2004},
+  doi       = {10.1145/1031495.1031515}
+}
+% [V content; DOI U]
+@article{perrig2002spins,
+  author  = {Perrig, Adrian and Szewczyk, Robert and Tygar, J. D. and Wen, Victor and Culler, David E.},
+  title   = {{SPINS}: Security Protocols for Sensor Networks},
+  journal = {Wireless Networks},
+  volume  = {8},
+  number  = {5},
+  pages   = {521--534},
+  year    = {2002},
+  doi     = {10.1023/A:1016598314198}
+}
+% [U] VERIFY
+@inproceedings{eschenauer2002key,
+  author    = {Eschenauer, Laurent and Gligor, Virgil D.},
+  title     = {A Key-Management Scheme for Distributed Sensor Networks},
+  booktitle = {Proc. 9th ACM Conf. Computer and Communications Security (CCS)},
+  pages     = {41--47},
+  year      = {2002},
+  doi       = {10.1145/586110.586117}
+}
+% [U] VERIFY
+@inproceedings{chan2003random,
+  author    = {Chan, Haowen and Perrig, Adrian and Song, Dawn},
+  title     = {Random Key Predistribution Schemes for Sensor Networks},
+  booktitle = {Proc. IEEE Symposium on Security and Privacy},
+  pages     = {197--213},
+  year      = {2003},
+  doi       = {10.1109/SECPRI.2003.1199337}
+}
+% [U] VERIFY
+@article{zhu2006leap,
+  author  = {Zhu, Sencun and Setia, Sanjeev and Jajodia, Sushil},
+  title   = {{LEAP+}: Efficient Security Mechanisms for Large-Scale Distributed Sensor Networks},
+  journal = {ACM Transactions on Sensor Networks},
+  volume  = {2},
+  number  = {4},
+  pages   = {500--528},
+  year    = {2006},
+  doi     = {10.1145/1218556.1218559}
+}
+% [U] VERIFY DOI
+@inproceedings{luk2007minisec,
+  author    = {Luk, Mark and Mezzour, Ghita and Perrig, Adrian and Gligor, Virgil},
+  title     = {{MiniSec}: A Secure Sensor Network Communication Architecture},
+  booktitle = {Proc. 6th Int. Conf. Information Processing in Sensor Networks (IPSN)},
+  pages     = {479--488},
+  year      = {2007},
+  doi       = {10.1145/1236360.1236421}
+}
+% [V citation]
+@techreport{nist80057,
+  author      = {Barker, Elaine},
+  title       = {Recommendation for Key Management: Part 1 -- General},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST Special Publication},
+  number      = {SP 800-57 Part 1 Rev. 5},
+  year        = {2020},
+  doi         = {10.6028/NIST.SP.800-57pt1r5}
+}

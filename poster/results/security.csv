@@ -1,0 +1,13 @@
+cipher,tag_bytes,sf,phy_payload,toa_ms,tx_energy_mJ,forgery_prob_per_try,key_security_bits,key_security_grover_bits,nonce_bytes,nonce_structure,aes_energy_uJ_assumed
+none (no authentication),0,7,19,51.5,7.64,1 (no check),0,0,0,-,0.0
+none (no authentication),0,10,19,329.7,48.96,1 (no check),0,0,0,-,0.0
+none (no authentication),0,12,19,1318.9,195.86,1 (no check),0,0,0,-,0.0
+AES-256-CCM,4,7,23,61.7,9.16,2.33e-10,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,4,10,23,370.7,55.05,2.33e-10,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,4,12,23,1482.8,220.19,2.33e-10,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,8,7,27,66.8,9.92,5.42e-20,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,8,10,27,411.6,61.13,5.42e-20,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,8,12,27,1646.6,244.52,5.42e-20,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,16,7,35,77.1,11.44,2.94e-39,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,16,10,35,493.6,73.29,2.94e-39,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963
+AES-256-CCM,16,12,35,1810.4,268.85,2.94e-39,256,128,9,counter(4) || epoch(3) || node_id(2),0.0963

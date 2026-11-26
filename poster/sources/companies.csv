@@ -1,0 +1,10 @@
+id,name,url,category,claim,claim_kind,bib_key,accessed,verified
+dryad,Dryad Networks (Silvanet),https://www.dryad.net/,in-situ WSN,"solar+supercap, BME688 gas sensor, 100 m radius/60 min detection (datasheet)",vendor claim,dryad_silvanet,2026-10-05,no
+n5,N5 Sensors,https://www.n5sensors.com/,in-situ WSN,"multi-gas (CO NO2 VOC PM2.5), hyper-local wind",vendor claim,n5sensors_chemshield,2026-10-05,no
+forestguard,ForestGuard,https://www.nowildfire.com/,in-situ WSN,"IoT sensors + AI; Turkey deployments (Marmaris, Çanakkale, Antalya)",vendor claim,forestguard_nowildfire,2026-10-05,no
+gridware,Gridware,https://www.gridware.io/,grid monitoring,"pole-mounted vibration/sound/E-field sensors",vendor claim,gridware_gridscope,2026-10-05,no
+pano,Pano AI,https://www.pano.ai/,camera tower,"20-35 km range, 1-min 360 scan",vendor claim,pano_ai,2026-10-05,no
+iqfirewatch,IQ FireWatch,https://www.iq-firewatch.com/,camera tower,"optical/IR smoke detection",vendor claim,iqfirewatch,2026-10-05,no
+ororatech,OroraTech,https://ororatech.com/,satellite,"thermal-IR nanosat, 20-30 min revisit target",vendor claim,ororatech,2026-10-05,no
+robotto,Robotto,https://robotto.ai/,drone,"thermal+RGB edge AI hotspot tracking",vendor claim,robotto_ai,2026-10-05,no
+rain,Rain,https://www.rain.aero/,drone,"37 km response radius, 115 L payload",vendor claim,rain_aero,2026-10-05,no

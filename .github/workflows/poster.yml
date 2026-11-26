@@ -10,7 +10,8 @@ permissions:
 
 jobs:
   poster:
-    runs-on: ubuntu-latest
+    # The archive needs Python 3.9, which actions/setup-python provides only up to Ubuntu 24.04.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

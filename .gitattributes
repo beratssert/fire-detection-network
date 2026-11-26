@@ -1,0 +1,11 @@
+# LF line endings on every system, so that the bash hooks and scripts also run after a checkout on Windows
+* text=auto eol=lf
+*.sh text eol=lf
+.githooks/* text eol=lf
+
+# Frozen archive and raw measurement data: never convert line endings
+poster/** -text
+data/** -text
+
+*.png binary
+*.pdf binary

@@ -1,0 +1,83 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+venv/
+env/
+
+# LaTeX build outputs (the poster PDF is built by CI and attached to releases)
+poster/*.aux
+poster/*.log
+poster/*.out
+poster/*.bbl
+poster/*.blg
+poster/*.fls
+poster/*.fdb_latexmk
+poster/poster.pdf
+
+# Firmware build outputs
+build/
+firmware/**/Debug/
+firmware/**/Release/
+*.elf
+*.o
+# Limited to firmware/, so that raw measurement files in data/ are never ignored by these patterns
+firmware/**/*.bin
+firmware/**/*.hex
+firmware/**/*.map
+firmware/**/*.list
+firmware/**/*.d
+.metadata/
+# STM32CubeIDE: user-specific settings (.project, .cproject and .ioc are committed)
+firmware/**/.settings/language.settings.xml
+
+# Secrets: keep every real key and token in secrets/ (docs/key-management.md).
+# The names below mirror scripts/check_secrets.py and catch files that were put elsewhere.
+secrets/
+secrets.*
+secret.[hc]
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+.env
+.env.*
+*.env
+keys.h
+keys.c
+keys.txt
+keys.json
+keys.csv
+keys.bin
+*[_-]keys.h
+*[_-]keys.c
+*[_-]keys.txt
+*[_-]keys.json
+*[_-]keys.csv
+*[_-]keys.bin
+master*key.h
+master*key.c
+master*key.txt
+master*key.json
+master*key.bin
+!*.example
+!*.example.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+~$*
+.~lock.*
+.vscode/
+.idea/
+.claude/settings.local.json

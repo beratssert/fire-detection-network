@@ -34,14 +34,12 @@ m1/<topic>              ●●        ●──●──●                     
 ```
 
 - `main`: only finished, working milestones. Every milestone merge into `main` gets a tag (`m1-single-link`, …). The only
-  other changes on `main` are urgent fixes and dependency updates, which are not tagged.
+  other changes on `main` are urgent fixes, which are not tagged.
 - `milestone/m<N>-<name>`: one integration branch per milestone, created from `main`. Only one milestone branch is
   active at a time (exception: M5 may run in parallel once its hardware arrives).
 - `m<N>/<topic>`: one short-lived branch per task, created from the milestone branch, e.g. `m1/radio-tx`,
   `m1/gateway-uart`, `m1/logger-csv`.
 - `fix/<topic>`: an urgent fix for `main`; after it is merged, `main` is merged into the active milestone branch.
-- Dependabot branches: weekly updates of the CI tools and actions. Their pull requests target `main`, and their commits
-  are tagged `[CI]`. After one is merged, `main` is merged into the active milestone branch.
 
 **Merging**
 
@@ -49,7 +47,7 @@ m1/<topic>              ●●        ●──●──●                     
 |---|---|---|
 | `m<N>/<topic>` → `milestone/m<N>-…` | pull request, 1 approval, **Rebase and merge** | atomic, tested commits stay one by one in a linear history |
 | `milestone/m<N>-…` → `main` | pull request when the milestone works as expected, **merge commit** (`--no-ff`), then tag | the milestone stays visible as one block; all history reaches `main` |
-| `fix/<topic>` or Dependabot branch → `main` | pull request, 1 approval, **Rebase and merge** | small changes need no merge commit |
+| `fix/<topic>` → `main` | pull request, 1 approval, **Rebase and merge** | small changes need no merge commit |
 | `main` → `milestone/m<N>-…` | pull request, 1 approval, **merge commit** | the commits of `main` keep their hashes; a rebase would duplicate them |
 
 Before opening a pull request, rebase the task branch on the latest milestone branch.

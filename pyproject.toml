@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+# poster/ is the frozen archive of the preliminary work; it is not linted or reformatted.
+extend-exclude = ["poster"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I", "UP"]
+
+[tool.pytest.ini_options]
+# Tests are found anywhere in the repository, except in the frozen archive and in build or environment folders
+norecursedirs = ["poster", ".*", "build", "venv", "env"]
+pythonpath = ["scripts"]

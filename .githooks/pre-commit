@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Commit only when the tests are green (see management/WORKFLOW.md). Enable with: bash scripts/setup.sh
+# The checks run on an export of the staged files, so that they test exactly what is going to be committed.
+set -euo pipefail
+root="$(git rev-parse --show-toplevel)"
+PYTHON="$(bash "$root/scripts/find-python.sh")"
+# CHECK_EXPORT: the export contains only files to be committed, so the checks skip no folder (scripts/check_secrets.py)
+export PYTHON PYTHONDONTWRITEBYTECODE=1 CHECK_EXPORT=1
+# The slow end-to-end tests of the hooks run here only if the hooks or scripts change; CI always runs them.
+if [[ -z "$(git diff --cached --name-only -- .githooks scripts)" ]]; then export SKIP_HOOK_TESTS=1; fi
+staged="$(mktemp -d)"
+trap 'rm -rf "$staged"' EXIT
+git checkout-index --all --prefix="$staged/"
+# tools and tests in the export must not act on the real repository
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_PREFIX
+bash "$staged/scripts/test.sh"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Locally, fixup!/squash!/amend! commits are allowed; CI rejects them (scripts/check-commit-msg.sh).
+exec "$(git rev-parse --show-toplevel)/scripts/check-commit-msg.sh" --allow-fixup "$(cat "$1")"

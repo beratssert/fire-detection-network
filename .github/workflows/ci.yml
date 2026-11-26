@@ -7,11 +7,13 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
 
 jobs:
   ci:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read # gitleaks lists the commits of a pull request
     steps:
       - uses: actions/checkout@v7
         with:

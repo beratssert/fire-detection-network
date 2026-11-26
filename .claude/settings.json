@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(**/secrets/**)",
+      "Edit(**/secrets/**)",
+      "Bash(git * --no-verify*)",
+      "Bash(git commit -n*)",
+      "Bash(git commit * -n*)",
+      "Bash(git * core.hooksPath*)"
+    ]
+  }
+}

@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true
         run: git diff --stat --exit-code -- poster/results
       - name: Build the poster
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: poster.tex
           working_directory: poster

@@ -1,0 +1,23 @@
+name: Task
+description: One task of a milestone
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Work package / area
+      options: [WP1, WP2, WP3, WP4, WP5, MODEL, DATA, DOCS, CI]
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What should be done?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: How do we know it is done?
+      description: Tests, a measurement run, an output file, a document.
+    validations:
+      required: true

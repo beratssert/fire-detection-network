@@ -1,0 +1,33 @@
+name: commits
+
+# Every commit of a pull request must have a valid message and pass scripts/test.sh (atomic, green commits).
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install tools
+        run: python -m pip install -r requirements-dev.txt
+      - name: Frozen archive and raw data unchanged
+        run: bash scripts/check-frozen.sh "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}"
+      - name: Check every commit
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          cp scripts/check-commits.sh "$RUNNER_TEMP/check-commits.sh"
+          bash "$RUNNER_TEMP/check-commits.sh" "$BASE" "$HEAD"

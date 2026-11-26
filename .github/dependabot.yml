@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # The commit message check requires a tag (scripts/check-commit-msg.sh).
+    commit-message:
+      prefix: "[CI]"
+  # Tools only. poster/requirements.txt stays pinned on purpose: the published results depend on it.
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "[CI]"

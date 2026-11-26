@@ -1,0 +1,40 @@
+name: poster
+
+# poster/ is a frozen archive. This manual workflow re-runs the preliminary model and builds the poster PDF,
+# to show that the archived results can still be reproduced. Same order as poster/run_all.sh.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  poster:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: pip
+          cache-dependency-path: poster/requirements.txt
+      - name: Run the model
+        working-directory: poster
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python -m pip install -r requirements.txt
+          for step in models reqdens latency energy cost macros figures; do python "$step.py"; done
+          python tests/check_model.py
+      - name: Reproducibility of results/ (report only)
+        continue-on-error: true
+        run: git diff --stat --exit-code -- poster/results
+      - name: Build the poster
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: poster.tex
+          working_directory: poster
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poster
+          path: poster/poster.pdf

@@ -1,0 +1,75 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main, "milestone/**"]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install tools
+        run: python -m pip install -r requirements-dev.txt
+      - name: Checks and tests
+        run: ./scripts/test.sh
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  setup:
+    # The set-up script, the checks and the hooks have to work on every system the team uses.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the push test below cannot push from a shallow clone
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up the clone
+        shell: bash
+        run: bash scripts/setup.sh
+      - name: Checks and tests
+        shell: bash
+        run: bash scripts/test.sh
+      - name: Hooks
+        shell: bash
+        run: |
+          git config user.name "ci"
+          git config user.email "ci@users.noreply.github.com"
+          git commit --allow-empty -m "[CI] Check that the hooks run"
+          git commit --allow-empty --fixup HEAD
+          git init --bare -q ../hook-test.git
+          git push -q ../hook-test.git HEAD:refs/heads/hook-test
+
+  sonar:
+    # Enabled by the repository variable SONAR_ENABLED=true once SonarQube Cloud is set up (management/WORKFLOW.md).
+    needs: ci
+    if: vars.SONAR_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: SonarQube Cloud analysis
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -1,0 +1,20 @@
+name: release
+
+# A milestone tag (m1-single-link, m2-multi-hop, ...) creates a GitHub release with generated notes.
+# Firmware binaries are attached here together with the first firmware workflow. Only binaries built with the all-zero
+# key template may be attached (docs/key-management.md).
+on:
+  push:
+    tags: ["m*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
